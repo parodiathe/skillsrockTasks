@@ -11,7 +11,7 @@ public class ConcurrentBank {
         return account;
     }
 
-    public double getBalance() {
+    public double getTotalBalance()() {
 
         BankAccount[] accountsCopy = accounts.toArray(new BankAccount[0]);
         double total = 0;
