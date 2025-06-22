@@ -18,3 +18,20 @@ public class CountOfElements {
         return map;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            Object[] elements = {2,4,6,8,2,4};
+
+            Map<Object, Integer> result = CountOfElements.countOfElements(elements);
+
+            for (Map.Entry<Object, Integer> entry : result.entrySet()) {
+                System.out.println(entry.getKey() + " - " + entry.getValue());
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
