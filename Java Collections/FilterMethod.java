@@ -17,3 +17,15 @@ class FilterMethod {
         T apply(T o);
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        String[] input = {"fdsfdsf", "fdsfsdfsdf", "dsdsadsad, dsadsad, dsadasda","dsdasdad"};
+
+        String[] output = FilterMethod.filter(input, s -> s.toUpperCase());
+
+        for (String s : output) {
+            System.out.println(s);
+        }
+    }
+}
