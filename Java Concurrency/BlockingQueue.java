@@ -54,3 +54,17 @@ public class ConcurrencyFirstTask {
     }
 }
 
+
+public class Main {
+
+    public static void main(String[] args) {
+        ConcurrencyFirstTask.BlockingQueue queue = new ConcurrencyFirstTask.BlockingQueue(2);
+
+        new Thread(queue::dequeue).start();
+        new Thread(queue::dequeue).start();
+        new Thread(() -> queue.enqueue(10)).start();
+        new Thread(() -> queue.enqueue(30)).start();
+        new Thread(() -> queue.enqueue(20)).start();
+    }
+
+}
